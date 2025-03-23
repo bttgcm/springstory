@@ -1,5 +1,6 @@
 ---
 output-file: "index.html"
+embed-resources: true
 format: 
   closeread-html:
     css: styles.css
