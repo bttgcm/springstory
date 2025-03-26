@@ -12,7 +12,6 @@ format:
       narrative-background-color-sidebar: white
       narrative-background-color-overlay: rgba(0, 0, 0, 0.4)
       section-background-color: white
-      narrative-border-radius: 0px
       narrative-overlay-font-family: "Roboto"
 ---
 
@@ -28,17 +27,19 @@ Given that academic writing is usually not the most popular mean of communicatio
 \
 \
 
+
 ::::::: {.cr-section layout="overlay-left"}
 ::: {#cr-himal}
-![](img/img001.jpg){max-width="100;max-height=100"}
+<img src="img/img001.jpg" alt="Your image description" style="width: 100%; height: auto;">
+
 :::
 
 ::: {#cr-himal2}
-![](img/img002.svg){max-width="100;max-height=100"}
+<img src="img/img002.svg" alt="Your image description" style="width: 100%; height: auto;">
 :::
 
 ::: {#cr-himal3}
-![](img/img003.svg)
+<img src="img/img003.svg" alt="Your image description" style="width: 100%; height: auto;">
 :::
 
 ::: {#cr-map}
