@@ -13,6 +13,7 @@ format:
       narrative-background-color-overlay: rgba(0, 0, 0, 0.4)
       section-background-color: white
       narrative-overlay-font-family: "Roboto"
+      narrative-border-radius: 1px
 ---
 
 # Spring Revival in the Mid-Hills of the Himalaya: A Socioeconomic Assessment Using Benefit–Cost Analysis
@@ -20,32 +21,32 @@ format:
 \
 *Authors :G.Butte, K.Khadka, A.Aldinucci, B.Macaulay, S.Buchar*
 
+\
 This page is a visual narration based of the article we wrote on an socio-economic valuation of spring revival activities in Nepal.
 
 Given that academic writing is usually not the most popular mean of communication, I tried to explore the possibility of summarising the article in a more approachable visual format. Enjoy!
 
 \
 \
-
+\
+\
 
 ::::::: {.cr-section layout="overlay-left"}
 ::: {#cr-himal}
-<img src="img/img001.jpg" alt="Your image description" style="width: 100%; height: auto;">
-
+<img src="img/img001.jpg" alt="Your image description" style="width: 100%; height: auto;"/>
 :::
 
 ::: {#cr-himal2}
-<img src="img/img002.svg" alt="Your image description" style="width: 100%; height: auto;">
+<img src="img/img002.svg" alt="Your image description" style="width: 100%; height: auto;"/>
 :::
 
 ::: {#cr-himal3}
-<img src="img/img003.svg" alt="Your image description" style="width: 100%; height: auto;">
+<img src="img/img003.svg" alt="Your image description" style="width: 100%; height: auto;"/>
 :::
 
 ::: {#cr-map}
 ![](img/img001.jpg)
 :::
-
 [Context]{.high} The Himalaya is usually associated with high mountains, covered in perennial glaciers. Water sources are therefore understood as being of glacial origin. [@cr-himal]
 
 From a water perspective, mountains have been defined as "water towers" because they capture water, store and release water by gravity to lower areas.[@cr-himal2]
@@ -53,9 +54,10 @@ From a water perspective, mountains have been defined as "water towers" because 
 In reality, there is a lower area, referred as *mid-hills* that is composed of mountain that reach 2500m and more, that do not host glacier nor can access glacial water. [@cr-himal3]
 
 Population in these areas uses water from mountain springs or, in some cases, by pumping from water bodies present at the bottom of the valley.
+
 :::::::
 
-::::::: {.cr-section layout="sidebar-left"}
+:::::::: {.cr-section layout="sidebar-left"}
 ::: {#cr-causal}
 ![](img/causal.png){max-width="100;max-height=100"}
 :::
@@ -63,6 +65,96 @@ Population in these areas uses water from mountain springs or, in some cases, by
 ::: {#cr-costs}
 ![](img/costs.png){max-height="100"}
 :::
+
+::: {#cr-cost-st01}
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=5}
+library(ggplot2)
+library(gridExtra)
+library(ggiraph)
+cba_costs <- read.csv("data/cba_scen_costs.csv")
+p1 <- ggplot(cba_costs, aes(x = par, y = val, fill = scen, alpha = step01)) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  theme_minimal() +
+  scale_fill_brewer(palette = "Paired") +
+  labs(x = "Costs", y = "Costs over 10 yr in 100.000 NPR") +
+  ylim(0, 17) +
+  guides(alpha = "none")
+
+p1
+```
+:::
+::: {#cr-cost-st01b}
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=5}
+library(ggplot2)
+library(gridExtra)
+library(ggiraph)
+cba_costs <- read.csv("data/cba_scen_costs.csv")
+p1 <- ggplot(cba_costs, aes(x = par, y = val, fill = scen, alpha = step01b)) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  theme_minimal() +
+  scale_fill_brewer(palette = "Paired") +
+  labs(x = "Costs", y = "Costs over 10 yr in 100.000 NPR") +
+  ylim(0, 17) +
+  guides(alpha = "none")
+
+p1
+```
+:::
+
+
+::: {#cr-cost-st02}
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=5}
+library(ggplot2)
+library(gridExtra)
+library(ggiraph)
+cba_costs <- read.csv("data/cba_scen_costs.csv")
+p1 <- ggplot(cba_costs, aes(x = par, y = val, fill = scen, alpha = step02)) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  theme_minimal() +
+  scale_fill_brewer(palette = "Paired") +
+  labs(x = "Costs", y = "Costs over 10 yr in 100.000 NPR") +
+  ylim(0, 17) +
+  guides(alpha = "none")
+
+p1
+```
+:::
+::: {#cr-cost-st02b}
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=5}
+library(ggplot2)
+library(gridExtra)
+library(ggiraph)
+cba_costs <- read.csv("data/cba_scen_costs.csv")
+p1 <- ggplot(cba_costs, aes(x = par, y = val, fill = scen, alpha = step02b)) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  theme_minimal() +
+  scale_fill_brewer(palette = "Paired") +
+  labs(x = "Costs", y = "Costs over 10 yr in 100.000 NPR") +
+  ylim(0, 17) +
+  guides(alpha = "none")
+
+p1
+```
+:::
+
+::: {#cr-cost-st03}
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=5}
+library(ggplot2)
+library(gridExtra)
+library(ggiraph)
+cba_costs <- read.csv("data/cba_scen_costs.csv")
+p1 <- ggplot(cba_costs, aes(x = par, y = val, fill = scen, alpha = step03)) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  theme_minimal() +
+  scale_fill_brewer(palette = "Paired") +
+  labs(x = "Costs", y = "Costs over 10 yr in 100.000 NPR") +
+  ylim(0, 17) +
+  guides(alpha = "none")
+
+p1
+```
+:::
+
 
 ::: {#cr-benefits}
 ![](img/benefits.png){max-height="100"}
@@ -72,27 +164,161 @@ Population in these areas uses water from mountain springs or, in some cases, by
 ![](img/bcr.png)
 :::
 
-In recent years, mountain springs have been found declining across the Himalaya. For this purpose revival activities have been designed and implemented. @cr-revival
+::: {#cr-ben01}
+<img src="img/dendo01.svg" alt="Your image description" style="width: 100%; height: auto;"/>
+:::
+::: {#cr-ben02}
+<img src="img/dendo02.svg" alt="Your image description" style="width: 100%; height: auto;"/>
+:::
+::: {#cr-ben03}
+<img src="img/dendo03.svg" alt="Your image description" style="width: 100%; height: auto;"/>
+:::
+::: {#cr-ben04}
+<img src="img/dendo04.svg" alt="Your image description" style="width: 100%; height: auto;"/>
+:::
 
+::: {#cr-ben-time}
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=5}
+library(ggplot2)
+library(gridExtra)
+library(ggiraph)
+cba_ben <- read.csv("data/cba_scen_ben.csv")
+p1 <- ggplot(cba_ben, aes(x = par, y = val, fill = scen, alpha=time)) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  theme_minimal() +
+  scale_fill_brewer(palette = "Paired") +
+  labs(x = "Benefit type", y = "Benefits over 10 yr in 100.000 NPR") +
+  ylim(0, 35) +
+  guides(alpha = "none")
+
+p1
+```
+:::
+
+::: {#cr-ben-ecos}
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=5}
+library(ggplot2)
+library(gridExtra)
+library(ggiraph)
+cba_ben <- read.csv("data/cba_scen_ben.csv")
+p1 <- ggplot(cba_ben, aes(x = par, y = val, fill = scen, alpha=ecos)) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  theme_minimal() +
+  scale_fill_brewer(palette = "Paired") +
+  labs(x = "Benefit type", y = "Benefits over 10 yr in 100.000 NPR") +
+  ylim(0, 35) +
+  guides(alpha = "none")
+
+p1
+```
+:::
+
+::: {#cr-ben-prod}
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=5}
+library(ggplot2)
+library(gridExtra)
+library(ggiraph)
+cba_ben <- read.csv("data/cba_scen_ben.csv")
+p1 <- ggplot(cba_ben, aes(x = par, y = val, fill = scen, alpha=prod)) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  theme_minimal() +
+  scale_fill_brewer(palette = "Paired") +
+  labs(x = "Benefit type", y = "Benefits over 10 yr in 100.000 NPR") +
+  ylim(0, 35) +
+  guides(alpha = "none")
+
+p1
+```
+:::
+
+::: {#cr-ben-health}
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=5}
+library(ggplot2)
+library(gridExtra)
+cba_ben <- read.csv("data/cba_scen_ben.csv")
+p1 <- ggplot(cba_ben, aes(x = par, y = val, fill = scen, alpha=health)) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  theme_minimal() +
+  scale_fill_brewer(palette = "Paired") +
+  labs(x = "Benefit type", y = "Benefits over 10 yr in 100.000 NPR") +
+  ylim(0, 35) +
+  guides(alpha = "none")
+
+p1
+```
+:::
+
+::: {#cr-cba}
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=5}
+library(ggplot2)
+library(gridExtra)
+library(ggiraph)
+cba <- read.csv("data/cba.csv")
+p1 <- ggplot(cba, aes(x = scen, y = val, fill = cat)) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  theme_minimal() +
+  scale_fill_brewer(palette = "Paired") +
+  labs(x = "Scenario", y = "Value over 10 yr in 100.000 NPR") +
+  ylim(0, 35) +
+  guides(alpha = "none")
+
+p1
+```
+:::
+In recent years, mountain springs have been found declining across the Himalaya. For this purpose revival activities have been designed and implemented. @cr-revival
 Our research tried to run a cost-benefit analysis on these revival activities with two case study in Nepal and two more generic scenarios.
 
-Costs were identified by looking at records of the revival activities carried in the two study sites. @cr-costs
+Costs were identified by looking at records of the revival activities carried in the two study sites.The biggest cost comes from the hydro-geological mapping of the "water tower" (C_lab_wt). @cr-cost-st01
 
-The biggest cost comes from the hydro-geological mapping of the "water tower" (C_lab_wt). This means that reviving several springs within the same water tower can reduce costs because of the economy of scale.
+Since cost of mapping are shared across all the springs, reviving several springs can reduce the cost per spring. @cr-cost-st01b
 
-Benefits were identified using previous research and conducting focus group in the communities living near the springs. [@cr-causal]
+Cost of implementation (labour and material) are rather minimal. @cr-cost-st02
 
-Then we transformed the findings into equations to estimate the benefits in monetary terms. In our scenarios, the main benefit was generated from time saving followed by ecosystem benefits. [@cr-benefits]
+Project costs such as management (C_lab), cost of capital (C_fin) and operation and management (C_om) play a role in the overall resource need. @cr-cost-st03
 
-In three out of the four scenarios, benefits over-passed costs (Benefit Cost Ratio above one). This suggests that spring revivals are likely to be a valuable investment also from economic perspective. [@cr-bcr]
+In one scenario the operation costs was significantly higher due to the installation of a water pump. @cr-cost-st02b
 
-The fact that in one scenario (BHA) costs were higher than benefits shows that revived springs need to be used by the community.
+Mapping benefits was more challenging. We used published research, direct observations and focus groups in the communities living near the springs. [@cr-ben01]
 
-This study, should be replicated in several other sites since the impact of a water spring is highly dependent on local context. Despite this limitation, it shows that spring revival can be a solutions that also brings economic benefits.
-:::::::
+A first group of benefits comes from the increase of water flow. [@cr-ben02]
+
+In some cases, revived springs become an additional water source. This can bring ecosystem benefits and release tensions for water allocation. [@cr-ben03]
+
+Lastly, the project itself can bring benefits in terms of capabilities. [@cr-ben04]
+
+Benefits from time saving were estimated as the highest. [@cr-ben-time]
+
+Followed by ecosystem benefits that would be very context dependent. [@cr-ben-ecos]
+
+Some benefits related to agricultural production due to increased water were also found.  [@cr-ben-prod]
+
+Lastly, health benefits from access to clean water. [@cr-ben-health]
+
+The comparison between costs and benefits showed that in 3 out of 4 scenarios, benefits were higher. [@cr-cba]
+
+In one scenario (BHA) costs were higher than benefits due to the low usage of the spring.
+
+::: {#cr-bcr}
+![](img/bcr.png)
+:::
+
+Using more common parameters as Benefit-Cost Ratio (BCR) and Internal rate of return (IRR) showed promising results. @cr-bcr
+
+::: {#cr-cover}
+<img src="img/cover.png" alt="Your image description" style="width: 65%; height: auto;"/>
+:::
+
+This study, should be replicated in several other sites since the impact of a water spring is highly dependent on local context. Despite this limitation, it shows that spring revival can be a solutions that also brings economic benefits. @cr-cover
+::::::::
+\
+\
+\
+\
+
 
 #  {.page-columns .page-full}
 
 ## Credits
+Coding using Quarto, R, Closeread extension, ggplot package. Coded by [Giacomo Butte](https://bttgcm.github.io/prtfl2025/).
 
 Images of mountains taken from Google Earth, diagrams taken from Giacomo Butte, Karishma Khadka, Alice Aldinucci, Bobby Macaulay, Sanjeev Bhuchar "[Spring Revival in the Mid-Hills of the Himalaya: A Socioeconomic Assessment Using Benefit–Cost Analysis](https://bioone.org/journals/mountain-research-and-development/volume-44/issue-4/mrd.2024.00020/Spring-Revival-in-the-Mid-Hills-of-the-Himalaya/10.1659/mrd.2024.00020.full)," Mountain Research and Development, 44(4), R12-R25, (6 December 2024). Built with R, Quarto and closeread extensions.

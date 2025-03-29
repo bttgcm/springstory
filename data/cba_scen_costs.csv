@@ -1,0 +1,25 @@
+scen,par,val,text,step01,step01b,step02,step03,step02b
+BHA,C_fin,2.111231325,Cost of capital,0,0,0,1,0
+PAT,C_fin,2.112561433,Cost of capital,0,0,0,1,0
+GEN,C_fin,2.105758794,Cost of capital,0,0,0,1,0
+WS,C_fin,2.09851259,Cost of capital,0,0,0,1,0
+BHA,C_lab,2.000652353,Skilled labour for project managent and monitoring,0,0,0,1,0
+PAT,C_lab,1.998297426,Skilled labour for project managent and monitoring,0,0,0,1,0
+GEN,C_lab,2.001698471,Skilled labour for project managent and monitoring,0,0,0,1,0
+WS,C_lab,1.995954979,Skilled labour for project managent and monitoring,0,0,0,1,0
+BHA,C_lab_wt,8.998792248,"Cost of hydrogeological mapping. The more the springs in the same water tower are revived, the less the cost per spring",1,0,0,0,0
+PAT,C_lab_wt,9.004710992,"Cost of hydrogeological mapping. The more the springs in the same water tower are revived, the less the cost per spring",1,1,0,0,0
+GEN,C_lab_wt,4.261542841,"Cost of hydrogeological mapping. The more the springs in the same water tower are revived, the less the cost per spring",1,1,0,0,0
+WS,C_lab_wt,4.274831567,"Cost of hydrogeological mapping. The more the springs in the same water tower are revived, the less the cost per spring",1,0,0,0,0
+BHA,C_mat,1.151292661,"Cost for material for trenches, pits",0,0,1,0,0
+PAT,C_mat,1.154131168,"Cost for material for trenches, pits",0,0,1,0,0
+GEN,C_mat,1.15260455,"Cost for material for trenches, pits",0,0,1,0,0
+WS,C_mat,1.149871881,"Cost for material for trenches, pits",0,0,1,0,0
+BHA,C_om,1.498291594,Operation and management,0,0,0,1,0
+PAT,C_om,15.99408211,Operation and management. For Pathal cost are higher because a pump was installed,0,0,0,1,1
+GEN,C_om,1.497851104,Operation and management,0,0,0,1,0
+WS,C_om,1.508851886,Operation and management,0,0,0,1,0
+BHA,C_unlab,1.052562384,"Unskilled labour for trenches, pits etc.",0,0,1,0,0
+PAT,C_unlab,1.052503026,"Unskilled labour for trenches, pits etc.",0,0,1,0,0
+GEN,C_unlab,1.049906677,"Unskilled labour for trenches, pits etc.",0,0,1,0,0
+WS,C_unlab,1.053674336,"Unskilled labour for trenches, pits etc.",0,0,1,0,0

@@ -32,3 +32,7 @@ h3 {
   font-family: 'Playfair Display', 'Times New Roman', serif;
   font-weight: 500;
 }
+
+.page-columns.page-full {
+  background-color: color: #B83B3B;
+}
